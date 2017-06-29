@@ -12,3 +12,7 @@ endpoints:
 ribbon:
   eureka:
     enabled: true
+
+spring:
+  application:
+    name: service-feign

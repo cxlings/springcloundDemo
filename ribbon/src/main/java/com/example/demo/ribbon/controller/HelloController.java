@@ -24,12 +24,12 @@ public class HelloController {
    */
   @RequestMapping("/hello")
   public String hi(@RequestParam String name){
-    return  productService.hello( name );
+    return  helloService.hi( name );
   }
 
-  @RequestMapping("product/{id}")
+  @RequestMapping("/{id}")
   public String product(@PathVariable String id ){
-     return  productService.sayId( id );
+     return  helloService.hi( id );
   }
 
 }

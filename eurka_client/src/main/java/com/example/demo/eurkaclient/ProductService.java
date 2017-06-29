@@ -25,7 +25,7 @@ public class ProductService {
    */
   @RequestMapping("/hi")
   public String say(@RequestParam("name") String name ){
-    return  "hi"+ProductService.class.getName()+ name;
+    return  "hi"+ProductService.class.getName()+ "   " +name;
   }
 
   /**

@@ -1,18 +1,23 @@
 package com.example.demo.feign.service;
 
-import com.example.demo.feign.controller.HelloController;
-import org.springframework.stereotype.Component;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by wanghui on 2017/6/29.
  */
 
-@Component
-public class HelloService implements HelloController {
+@Service
+@FeignClient(value = "SERVICE-HI", fallback = HelloService.class )
+public interface HelloService{
 
-  @Override
-  public String hello(@RequestParam String name) {
-    return "hello errro fall back "+ name;
-  }
+  @RequestMapping("/product/hi")
+  public String say(@RequestParam("name") String name );
+
+  @RequestMapping("/product/{id}")
+  public String id(@PathVariable("id") String id );
+
 }
