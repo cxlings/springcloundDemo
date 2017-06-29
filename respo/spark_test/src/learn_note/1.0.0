@@ -1,0 +1,16 @@
+1\ mvn package
+2\ ./spark-submit \
+   --master local \
+   --class  com.xiangxin.spark.WordCount  \
+   /Users/wanghui/java/spark_test/target/spark_test-1.0.jar
+
+
+
+
+
+3\  map =>
+
+5\   ./spark-submit \
+      --master local \
+      --class  com.xiangxin.spark.JsonTest  \
+      /Users/wanghui/java/spark_test/target/spark_test-1.0.jar
