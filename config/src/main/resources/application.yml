@@ -1,0 +1,17 @@
+spring:
+  application:
+     name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          uri: https://github.com/Tonyhui/springBoot/
+          password: 123abc456?
+          username: tonyhui
+          basedir: respo
+      profile:  dev
+server:
+  port: 8888
+
+
