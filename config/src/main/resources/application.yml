@@ -9,8 +9,9 @@ spring:
           uri: https://github.com/Tonyhui/springBoot/
           password: 123abc456?
           username: tonyhui
-          basedir: respo
+          searchPaths: respo
       profile:  dev
+
 server:
   port: 8888
 

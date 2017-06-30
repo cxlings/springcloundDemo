@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by wanghui on 2017/6/29.
+ *
+ *  eurka 注册的 服务提供者名称 SERVICE-HI
  */
 
 @Service

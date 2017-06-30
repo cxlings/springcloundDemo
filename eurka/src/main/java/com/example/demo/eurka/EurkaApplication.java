@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 public class EurkaApplication {
 
 	/**
-	 * 服务的注册中心
+	 * 服务的注册中心 启动
 	 * @param args
    */
 	public static void main(String[] args) {

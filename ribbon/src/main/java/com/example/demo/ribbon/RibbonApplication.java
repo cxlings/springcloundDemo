@@ -13,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * 在程序的入口类加@EnableHystrix：断路器
+ * @EnableDiscoveryClient 在 eurka 注册客户端
  */
 
 @SpringBootApplication
