@@ -16,8 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "SERVICE-HI", fallback = HelloService.class )
 public interface HelloService{
 
+  /**
+   *  代理,其真正的实现 是 服务提供者
+   * @param name
+   * @return
+   */
   @RequestMapping("/product/hi")
   public String say(@RequestParam("name") String name );
+
 
   @RequestMapping("/product/{id}")
   public String id(@PathVariable("id") String id );
