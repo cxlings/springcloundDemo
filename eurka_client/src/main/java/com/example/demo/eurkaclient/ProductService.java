@@ -1,5 +1,6 @@
 package com.example.demo.eurkaclient;
 
+import com.example.demo.eurkaclient.model.Product;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,8 +36,8 @@ public class ProductService {
    * @return
    */
   @RequestMapping("/{id}")
-  public String product(@PathVariable("id") String id ){
-    return  "eurka client , hi"+ id;
+  public Product product(@PathVariable("id") String id ){
+    return  new Product( Long.parseLong( id ) , "test" );
   }
 
 
